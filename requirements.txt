@@ -1,0 +1,6 @@
+customtkinter>=5.2,<6
+mediapipe>=0.10,<1
+opencv-python>=4.10,<5
+pygame>=2.6,<3
+SpeechRecognition>=3.10,<4
+PyAudio>=0.2.14,<1
