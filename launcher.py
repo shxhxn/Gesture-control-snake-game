@@ -3,6 +3,7 @@ import customtkinter as ctk
 import subprocess
 import json
 import os
+import sys
 from tkinter import messagebox
 
 # -------------------------------
@@ -60,11 +61,11 @@ subtitle.pack(pady=5)
 def launch_game(mode):
     try:
         if mode == "keyboard":
-            subprocess.Popen(["python", "snake_game.py"])
+            subprocess.Popen([sys.executable, "snake_game.py"])
         elif mode == "gesture":
-            subprocess.Popen(["python", "gesture_control.py"])
+            subprocess.Popen([sys.executable, "gesture_control.py"])
         elif mode == "voice":
-            subprocess.Popen(["python", "voice_control.py"])
+            subprocess.Popen([sys.executable, "voice_control.py"])
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
@@ -126,7 +127,7 @@ def about_window():
     win.resizable(False, False)
 
     ctk.CTkLabel(win, text="About Snake Game Hub", font=("Segoe UI", 20, "bold")).pack(pady=15)
-    ctk.CTkLabel(win, text="Created by Shxhxn Sxmxr 👨‍💻\n\nPlay Snake in 3 modes:\n• Keyboard\n• Gesture (Webcam)\n• Voice Commands\n\nBuilt with Python 🐍 & CustomTkinter 💻",
+    ctk.CTkLabel(win, text="Created by Shahan Samar 👨‍💻\n\nPlay Snake in 3 modes:\n• Keyboard\n• Gesture (Webcam)\n• Voice Commands\n\nBuilt with Python 🐍 & CustomTkinter 💻",
                  justify="center", wraplength=380, font=("Segoe UI", 14)).pack(pady=15)
 
 # -------------------------------
